@@ -112,10 +112,16 @@ app.patch("/task/edit/:id", async (req: Request, res: Response) => {
   return res.send(result);
 });
 
-app.get("/tasks/:id", (req: Request, res: Response) => {
+app.get("/tasks/:id", async (req: Request, res: Response) => {
   const { id } = req.params;
-  const foundTask = tasks[Number(id)];
-  res.send(foundTask);
+  const task = await prisma.task.findUnique({
+    where: {
+      id: Number(id),
+    },
+  })
+
+  // const foundTask = tasks[Number(id)];
+  res.send(task);
 });
 
 app.delete("/tasks/:id", (req: Request, res: Response) => {
