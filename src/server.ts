@@ -11,21 +11,6 @@ app.use(express.json());
 
 const port = process.env.PORT || 3005;
 
-const tasks = [
-  {
-    title: "example title a",
-    description: "example description a",
-    assignee: "Ola",
-    published: false,
-  },
-  {
-    title: "example title b",
-    description: "example description b",
-    assignee: "ifamiko",
-    published: true,
-  },
-];
-
 app.get("/", (req: Request, res: Response) => {
   res.send("hello");
 });
