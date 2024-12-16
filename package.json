@@ -1,0 +1,34 @@
+{
+  "name": "voterdrive-api",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "server.ts",
+  "scripts": {
+    "dev": "node --import=tsx --watch --env-file=.env src/server.ts",
+    "serve": "node --experimental-strip-types --watch --env-file=.env src/server.ts",
+    "build": "tsc  --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
+    "@prisma/client": "^5.11.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.0.1", 
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/ws": "^8.5.13",
+    "nodemon": "^3.1.9",
+    "prisma": "^5.11.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
